@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CC2179C832380F4E30F1261 /* Pods_petifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FEBE98571D0897B5AAA00C /* Pods_petifyUITests.framework */; };
+		39DFA3F62A07D2B01A9681D9 /* Pods_petifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF2B20EEEDF48CF1E09ACA0 /* Pods_petifyTests.framework */; };
+		67B8E96436C21DA3A4338A0A /* Pods_petify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3D5DEAC4EC7EB580FA858 /* Pods_petify.framework */; };
+		FAFC4C3E1F750BC00041C575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */; };
+		FAFC4C431F750BC00041C575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C411F750BC00041C575 /* Main.storyboard */; };
+		FAFC4C451F750BC00041C575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C441F750BC00041C575 /* Assets.xcassets */; };
+		FAFC4C481F750BC00041C575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C461F750BC00041C575 /* LaunchScreen.storyboard */; };
+		FAFC4C531F750BC00041C575 /* petifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C521F750BC00041C575 /* petifyTests.swift */; };
+		FAFC4C5E1F750BC00041C575 /* petifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C5D1F750BC00041C575 /* petifyUITests.swift */; };
+		FAFC4C701F750CBC0041C575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C6F1F750CBC0041C575 /* HomeViewController.swift */; };
+		FAFC4C721F750D630041C575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C711F750D630041C575 /* GoogleService-Info.plist */; };
+		FAFC4C791F751E9A0041C575 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C781F751E9A0041C575 /* Pet.swift */; };
+		FAFC4C801F75415C0041C575 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C7E1F75415C0041C575 /* TableViewCell.swift */; };
+		FAFC4C811F75415C0041C575 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C7F1F75415C0041C575 /* TableViewCell.xib */; };
+		FAFC4C841F75702D0041C575 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C831F75702C0041C575 /* CellView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAFC4C4F1F750BC00041C575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFC4C321F750BC00041C575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAFC4C391F750BC00041C575;
+			remoteInfo = petify;
+		};
+		FAFC4C5A1F750BC00041C575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFC4C321F750BC00041C575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAFC4C391F750BC00041C575;
+			remoteInfo = petify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07CC88A6E3720E65B02B9DE4 /* Pods-petifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-petifyTests/Pods-petifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		226F14D0478F5D9ACEF10FB5 /* Pods-petifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petifyTests/Pods-petifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36FEBE98571D0897B5AAA00C /* Pods_petifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B3D5DEAC4EC7EB580FA858 /* Pods_petify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A74F42374D7AF61161668F0 /* Pods-petifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-petifyUITests/Pods-petifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8100B9D677F9A709F9C3457A /* Pods-petify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petify.release.xcconfig"; path = "Pods/Target Support Files/Pods-petify/Pods-petify.release.xcconfig"; sourceTree = "<group>"; };
+		C7FDCE4F549D119CEF521B7B /* Pods-petify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petify/Pods-petify.debug.xcconfig"; sourceTree = "<group>"; };
+		CE49D0FE1A035F827CEDDDD1 /* Pods-petifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petifyUITests/Pods-petifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF2B20EEEDF48CF1E09ACA0 /* Pods_petifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFC4C3A1F750BC00041C575 /* petify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAFC4C421F750BC00041C575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAFC4C441F750BC00041C575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAFC4C471F750BC00041C575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAFC4C491F750BC00041C575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFC4C4E1F750BC00041C575 /* petifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFC4C521F750BC00041C575 /* petifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petifyTests.swift; sourceTree = "<group>"; };
+		FAFC4C541F750BC00041C575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFC4C591F750BC00041C575 /* petifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFC4C5D1F750BC00041C575 /* petifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petifyUITests.swift; sourceTree = "<group>"; };
+		FAFC4C5F1F750BC00041C575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFC4C6F1F750CBC0041C575 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAFC4C711F750D630041C575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAFC4C781F751E9A0041C575 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		FAFC4C7E1F75415C0041C575 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FAFC4C7F1F75415C0041C575 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		FAFC4C831F75702C0041C575 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAFC4C371F750BC00041C575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B8E96436C21DA3A4338A0A /* Pods_petify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C4B1F750BC00041C575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39DFA3F62A07D2B01A9681D9 /* Pods_petifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C561F750BC00041C575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC2179C832380F4E30F1261 /* Pods_petifyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		439AA79C0CB82997EC878393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66B3D5DEAC4EC7EB580FA858 /* Pods_petify.framework */,
+				CFF2B20EEEDF48CF1E09ACA0 /* Pods_petifyTests.framework */,
+				36FEBE98571D0897B5AAA00C /* Pods_petifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46CBF2ADCFEAF73B2FDB2FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7FDCE4F549D119CEF521B7B /* Pods-petify.debug.xcconfig */,
+				8100B9D677F9A709F9C3457A /* Pods-petify.release.xcconfig */,
+				226F14D0478F5D9ACEF10FB5 /* Pods-petifyTests.debug.xcconfig */,
+				07CC88A6E3720E65B02B9DE4 /* Pods-petifyTests.release.xcconfig */,
+				CE49D0FE1A035F827CEDDDD1 /* Pods-petifyUITests.debug.xcconfig */,
+				6A74F42374D7AF61161668F0 /* Pods-petifyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAFC4C311F750BC00041C575 = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C3C1F750BC00041C575 /* petify */,
+				FAFC4C511F750BC00041C575 /* petifyTests */,
+				FAFC4C5C1F750BC00041C575 /* petifyUITests */,
+				FAFC4C3B1F750BC00041C575 /* Products */,
+				D46CBF2ADCFEAF73B2FDB2FE /* Pods */,
+				439AA79C0CB82997EC878393 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAFC4C3B1F750BC00041C575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C3A1F750BC00041C575 /* petify.app */,
+				FAFC4C4E1F750BC00041C575 /* petifyTests.xctest */,
+				FAFC4C591F750BC00041C575 /* petifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAFC4C3C1F750BC00041C575 /* petify */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C821F756A280041C575 /* designers */,
+				FAFC4C6D1F750C830041C575 /* models */,
+				FAFC4C6C1F750C7C0041C575 /* services */,
+				FAFC4C6B1F750C740041C575 /* controllers */,
+				FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */,
+				FAFC4C411F750BC00041C575 /* Main.storyboard */,
+				FAFC4C441F750BC00041C575 /* Assets.xcassets */,
+				FAFC4C461F750BC00041C575 /* LaunchScreen.storyboard */,
+				FAFC4C491F750BC00041C575 /* Info.plist */,
+				FAFC4C711F750D630041C575 /* GoogleService-Info.plist */,
+			);
+			path = petify;
+			sourceTree = "<group>";
+		};
+		FAFC4C511F750BC00041C575 /* petifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C521F750BC00041C575 /* petifyTests.swift */,
+				FAFC4C541F750BC00041C575 /* Info.plist */,
+			);
+			path = petifyTests;
+			sourceTree = "<group>";
+		};
+		FAFC4C5C1F750BC00041C575 /* petifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C5D1F750BC00041C575 /* petifyUITests.swift */,
+				FAFC4C5F1F750BC00041C575 /* Info.plist */,
+			);
+			path = petifyUITests;
+			sourceTree = "<group>";
+		};
+		FAFC4C6B1F750C740041C575 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C731F7512CC0041C575 /* home */,
+				FAFC4C6E1F750C9C0041C575 /* auth */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		FAFC4C6C1F750C7C0041C575 /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		FAFC4C6D1F750C830041C575 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C771F751E6F0041C575 /* structs */,
+				FAFC4C761F751E620041C575 /* classes */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		FAFC4C6E1F750C9C0041C575 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = auth;
+			sourceTree = "<group>";
+		};
+		FAFC4C731F7512CC0041C575 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C6F1F750CBC0041C575 /* HomeViewController.swift */,
+				FAFC4C7E1F75415C0041C575 /* TableViewCell.swift */,
+				FAFC4C7F1F75415C0041C575 /* TableViewCell.xib */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		FAFC4C761F751E620041C575 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C781F751E9A0041C575 /* Pet.swift */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		FAFC4C771F751E6F0041C575 /* structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = structs;
+			sourceTree = "<group>";
+		};
+		FAFC4C821F756A280041C575 /* designers */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC4C831F75702C0041C575 /* CellView.swift */,
+			);
+			name = designers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAFC4C391F750BC00041C575 /* petify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFC4C621F750BC00041C575 /* Build configuration list for PBXNativeTarget "petify" */;
+			buildPhases = (
+				12AD77874CB58CA52024BEBE /* [CP] Check Pods Manifest.lock */,
+				FAFC4C361F750BC00041C575 /* Sources */,
+				FAFC4C371F750BC00041C575 /* Frameworks */,
+				FAFC4C381F750BC00041C575 /* Resources */,
+				423C0FFC3F06E0E0FA1A42F9 /* [CP] Embed Pods Frameworks */,
+				709C9319C144934C8F7D6FEC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = petify;
+			productName = petify;
+			productReference = FAFC4C3A1F750BC00041C575 /* petify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAFC4C4D1F750BC00041C575 /* petifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFC4C651F750BC00041C575 /* Build configuration list for PBXNativeTarget "petifyTests" */;
+			buildPhases = (
+				A6DF27787C19BB6F078F11BA /* [CP] Check Pods Manifest.lock */,
+				FAFC4C4A1F750BC00041C575 /* Sources */,
+				FAFC4C4B1F750BC00041C575 /* Frameworks */,
+				FAFC4C4C1F750BC00041C575 /* Resources */,
+				6BB3A095AB323AA41F1A4CEE /* [CP] Embed Pods Frameworks */,
+				309F5583436202D8BAFCDB49 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAFC4C501F750BC00041C575 /* PBXTargetDependency */,
+			);
+			name = petifyTests;
+			productName = petifyTests;
+			productReference = FAFC4C4E1F750BC00041C575 /* petifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAFC4C581F750BC00041C575 /* petifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFC4C681F750BC00041C575 /* Build configuration list for PBXNativeTarget "petifyUITests" */;
+			buildPhases = (
+				02FAB0048CEF4A5C996AE803 /* [CP] Check Pods Manifest.lock */,
+				FAFC4C551F750BC00041C575 /* Sources */,
+				FAFC4C561F750BC00041C575 /* Frameworks */,
+				FAFC4C571F750BC00041C575 /* Resources */,
+				0A76923EB565E767DC6C33E1 /* [CP] Embed Pods Frameworks */,
+				C2EC36BF001DE314EAB34281 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAFC4C5B1F750BC00041C575 /* PBXTargetDependency */,
+			);
+			name = petifyUITests;
+			productName = petifyUITests;
+			productReference = FAFC4C591F750BC00041C575 /* petifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAFC4C321F750BC00041C575 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jose Pol Sastre";
+				TargetAttributes = {
+					FAFC4C391F750BC00041C575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					FAFC4C4D1F750BC00041C575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAFC4C391F750BC00041C575;
+					};
+					FAFC4C581F750BC00041C575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAFC4C391F750BC00041C575;
+					};
+				};
+			};
+			buildConfigurationList = FAFC4C351F750BC00041C575 /* Build configuration list for PBXProject "petify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAFC4C311F750BC00041C575;
+			productRefGroup = FAFC4C3B1F750BC00041C575 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAFC4C391F750BC00041C575 /* petify */,
+				FAFC4C4D1F750BC00041C575 /* petifyTests */,
+				FAFC4C581F750BC00041C575 /* petifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAFC4C381F750BC00041C575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC4C481F750BC00041C575 /* LaunchScreen.storyboard in Resources */,
+				FAFC4C811F75415C0041C575 /* TableViewCell.xib in Resources */,
+				FAFC4C721F750D630041C575 /* GoogleService-Info.plist in Resources */,
+				FAFC4C451F750BC00041C575 /* Assets.xcassets in Resources */,
+				FAFC4C431F750BC00041C575 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C4C1F750BC00041C575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C571F750BC00041C575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02FAB0048CEF4A5C996AE803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-petifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A76923EB565E767DC6C33E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petifyUITests/Pods-petifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12AD77874CB58CA52024BEBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-petify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		309F5583436202D8BAFCDB49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petifyTests/Pods-petifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		423C0FFC3F06E0E0FA1A42F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-petify/Pods-petify-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petify/Pods-petify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BB3A095AB323AA41F1A4CEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petifyTests/Pods-petifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		709C9319C144934C8F7D6FEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petify/Pods-petify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6DF27787C19BB6F078F11BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-petifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2EC36BF001DE314EAB34281 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petifyUITests/Pods-petifyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAFC4C361F750BC00041C575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC4C3E1F750BC00041C575 /* AppDelegate.swift in Sources */,
+				FAFC4C841F75702D0041C575 /* CellView.swift in Sources */,
+				FAFC4C801F75415C0041C575 /* TableViewCell.swift in Sources */,
+				FAFC4C791F751E9A0041C575 /* Pet.swift in Sources */,
+				FAFC4C701F750CBC0041C575 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C4A1F750BC00041C575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC4C531F750BC00041C575 /* petifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFC4C551F750BC00041C575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC4C5E1F750BC00041C575 /* petifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAFC4C501F750BC00041C575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAFC4C391F750BC00041C575 /* petify */;
+			targetProxy = FAFC4C4F1F750BC00041C575 /* PBXContainerItemProxy */;
+		};
+		FAFC4C5B1F750BC00041C575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAFC4C391F750BC00041C575 /* petify */;
+			targetProxy = FAFC4C5A1F750BC00041C575 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAFC4C411F750BC00041C575 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFC4C421F750BC00041C575 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAFC4C461F750BC00041C575 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFC4C471F750BC00041C575 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAFC4C601F750BC00041C575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAFC4C611F750BC00041C575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAFC4C631F750BC00041C575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FDCE4F549D119CEF521B7B /* Pods-petify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = petify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FAFC4C641F750BC00041C575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8100B9D677F9A709F9C3457A /* Pods-petify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = petify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FAFC4C661F750BC00041C575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226F14D0478F5D9ACEF10FB5 /* Pods-petifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = petifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/petify.app/petify";
+			};
+			name = Debug;
+		};
+		FAFC4C671F750BC00041C575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CC88A6E3720E65B02B9DE4 /* Pods-petifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = petifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/petify.app/petify";
+			};
+			name = Release;
+		};
+		FAFC4C691F750BC00041C575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE49D0FE1A035F827CEDDDD1 /* Pods-petifyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = petifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = petify;
+			};
+			name = Debug;
+		};
+		FAFC4C6A1F750BC00041C575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A74F42374D7AF61161668F0 /* Pods-petifyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = petifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.josepol.petifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = petify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAFC4C351F750BC00041C575 /* Build configuration list for PBXProject "petify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFC4C601F750BC00041C575 /* Debug */,
+				FAFC4C611F750BC00041C575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFC4C621F750BC00041C575 /* Build configuration list for PBXNativeTarget "petify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFC4C631F750BC00041C575 /* Debug */,
+				FAFC4C641F750BC00041C575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFC4C651F750BC00041C575 /* Build configuration list for PBXNativeTarget "petifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFC4C661F750BC00041C575 /* Debug */,
+				FAFC4C671F750BC00041C575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAFC4C681F750BC00041C575 /* Build configuration list for PBXNativeTarget "petifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFC4C691F750BC00041C575 /* Debug */,
+				FAFC4C6A1F750BC00041C575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAFC4C321F750BC00041C575 /* Project object */;
+}

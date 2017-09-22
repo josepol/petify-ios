@@ -1,0 +1,6 @@
+framework module Pods_petify {
+  umbrella header "Pods-petify-umbrella.h"
+
+  export *
+  module * { export * }
+}
