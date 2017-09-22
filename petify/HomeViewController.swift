@@ -12,6 +12,7 @@ struct cellData {
     let image: UIImage
     let name: String
     let age: Int
+    var isSelected: Bool
 }
 
 class HomeViewController: UIViewController {
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var search: UISearchBar!
+    @IBOutlet weak var addDeleteSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,11 @@ class HomeViewController: UIViewController {
         search.delegate = self
         
         petArray = [
-            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Muchachino", age: 7),
-            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Padme", age: 6),
-            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Carby", age: 6),
-            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Musha", age: 6),
-            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Bruno", age: 6)
+            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Muchachino", age: 7, isSelected: false),
+            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Padme", age: 6, isSelected: false),
+            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Carby", age: 6, isSelected: false),
+            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Musha", age: 6, isSelected: false),
+            cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Bruno", age: 6, isSelected: false)
         ]
         
         
@@ -44,6 +46,18 @@ class HomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    @IBAction func testAction(_ sender: UIButton) {
+        
+        for pet in petArray {
+            if pet.isSelected {
+                print("pet name: \(pet.name) selected")
+            }
+        }
+        
+        
     }
     
     
@@ -64,6 +78,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.separatorStyle = .none
         
         let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+        cell.delegate = self
         
         
         if searchIsActive {
@@ -86,6 +101,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         cell.selectionStyle = .none
+        
+        
     }
     
 }
@@ -123,5 +140,15 @@ extension HomeViewController: UISearchBarDelegate {
         
         self.tableView.reloadData()
     }
+    
+}
+
+extension HomeViewController: CustomTableViewCellDelegate {
+    
+    func didChangeSwitch(cell: TableViewCell) {
+        let indexPath = tableView.indexPath(for: cell)
+        petArray[(indexPath?.row)!].isSelected = cell.petSelected.isOn
+    }
+    
     
 }

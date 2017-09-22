@@ -11,6 +11,7 @@ import Foundation
 class Pet {
     var name: String = ""
     var age: Int = 0
+    var isSelected: Bool = false
     
     init(name: String, age: Int) {
         self.name = name

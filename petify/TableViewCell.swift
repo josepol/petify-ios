@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomTableViewCellDelegate {
+    func didChangeSwitch(cell: TableViewCell)
+}
+
 class TableViewCell: UITableViewCell {
 
     
@@ -17,5 +21,19 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var ageLabel: UILabel!
     
+    @IBOutlet weak var petSelected: UISwitch!
+    
+    var delegate: CustomTableViewCellDelegate!
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+    }
+    
+    
+    @IBAction func petSelectedAction(_ sender: Any) {
+        
+        delegate.didChangeSwitch(cell: self)
+        
+    }
     
 }

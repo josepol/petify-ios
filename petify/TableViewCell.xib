@@ -60,6 +60,9 @@
                                     <constraint firstAttribute="height" constant="31" id="5l8-xH-JR0"/>
                                     <constraint firstAttribute="width" constant="49" id="SdB-Tv-sCk"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="petSelectedAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="G4V-sC-vOA"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,6 +98,7 @@
                 <outlet property="ageLabel" destination="GcZ-TJ-pUX" id="o0I-K4-NDG"/>
                 <outlet property="nameLabel" destination="wSI-hP-qNF" id="bEW-B9-OBr"/>
                 <outlet property="petImageView" destination="rcx-hG-qCM" id="vaX-qq-Zux"/>
+                <outlet property="petSelected" destination="BCP-3c-BSy" id="8jC-k9-EXu"/>
             </connections>
             <point key="canvasLocation" x="34" y="48.5"/>
         </tableViewCell>
