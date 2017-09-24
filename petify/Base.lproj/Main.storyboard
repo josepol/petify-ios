@@ -62,28 +62,17 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Petify" id="q5R-ti-olc">
-                                        <barButtonItem key="leftBarButtonItem" title="-" id="BCT-86-7fW"/>
                                         <barButtonItem key="rightBarButtonItem" title="+" id="ByV-Ew-Bmg"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ea0-71-zvx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ea0-71-zvx">
                                 <rect key="frame" x="0.0" y="114" width="375" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-7W-Xlb">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-ZA-k8H">
-                                <rect key="frame" x="16" y="336" width="343" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="RHF-Jd-CNh"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Añadir"/>
-                                    <segment title="Borrar"/>
-                                </segments>
-                            </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qQ8-rw-wdg">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
@@ -91,14 +80,29 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6W-nM-Q2N">
-                                <rect key="frame" x="129" y="461" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6W-nM-Q2N">
+                                <rect key="frame" x="214" y="338" width="145" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="TKU-As-MFG"/>
+                                    <constraint firstAttribute="height" constant="30" id="jRb-NZ-Ydz"/>
+                                </constraints>
+                                <state key="normal" title="Borrar seleccionados"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mc7-pi-UTi"/>
+                                    <action selector="deleteSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vi-Js-I5H"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-va-rxs">
+                                <rect key="frame" x="40" y="425" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -106,31 +110,30 @@
                             <constraint firstAttribute="trailing" secondItem="qQ8-rw-wdg" secondAttribute="trailing" id="9et-ob-qgn"/>
                             <constraint firstItem="ea0-71-zvx" firstAttribute="top" secondItem="t8L-k2-Q7b" secondAttribute="bottom" constant="50" id="AVU-FQ-1m6"/>
                             <constraint firstItem="t8L-k2-Q7b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="As3-tt-RQd"/>
-                            <constraint firstItem="6Q3-ZA-k8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CpK-dj-0H4"/>
-                            <constraint firstItem="6Q3-ZA-k8H" firstAttribute="top" secondItem="ea0-71-zvx" secondAttribute="bottom" constant="8" id="EcS-g8-3GQ"/>
                             <constraint firstItem="Qpy-7W-Xlb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OzI-fP-DNk"/>
                             <constraint firstItem="ea0-71-zvx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PdW-4M-O7O"/>
                             <constraint firstItem="ea0-71-zvx" firstAttribute="top" secondItem="Qpy-7W-Xlb" secondAttribute="bottom" id="S76-3c-nIK"/>
                             <constraint firstItem="qQ8-rw-wdg" firstAttribute="top" secondItem="t8L-k2-Q7b" secondAttribute="bottom" id="Sjs-VL-4cY"/>
-                            <constraint firstItem="6Q3-ZA-k8H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="caT-1o-jxQ"/>
+                            <constraint firstItem="U6W-nM-Q2N" firstAttribute="top" secondItem="ea0-71-zvx" secondAttribute="bottom" constant="10" id="Xhn-nB-HX5"/>
                             <constraint firstItem="qQ8-rw-wdg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gNc-UX-GXb"/>
                             <constraint firstItem="Qpy-7W-Xlb" firstAttribute="top" secondItem="t8L-k2-Q7b" secondAttribute="bottom" id="igh-SV-nwo"/>
                             <constraint firstItem="t8L-k2-Q7b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l2s-pn-rYP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ea0-71-zvx" secondAttribute="bottom" constant="290" id="mw6-Qp-tJo"/>
                             <constraint firstAttribute="trailing" secondItem="Qpy-7W-Xlb" secondAttribute="trailing" id="wMz-De-HVu"/>
                             <constraint firstAttribute="trailing" secondItem="ea0-71-zvx" secondAttribute="trailing" id="xGy-3q-hE8"/>
+                            <constraint firstItem="U6W-nM-Q2N" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xr1-7m-5sX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="gKM-iR-KIg"/>
                     <connections>
-                        <outlet property="addDeleteSegment" destination="6Q3-ZA-k8H" id="cHu-h3-aEB"/>
                         <outlet property="search" destination="qQ8-rw-wdg" id="E1c-IM-p98"/>
                         <outlet property="tableView" destination="ea0-71-zvx" id="e5Z-fl-RBQ"/>
+                        <outlet property="test" destination="dDI-va-rxs" id="HIO-8P-Cpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1009" y="-929"/>
+            <point key="canvasLocation" x="-1010.4" y="-929.68515742128943"/>
         </scene>
     </scenes>
 </document>

@@ -25,10 +25,6 @@ class TableViewCell: UITableViewCell {
     
     var delegate: CustomTableViewCellDelegate!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        
-    }
-    
     
     @IBAction func petSelectedAction(_ sender: Any) {
         

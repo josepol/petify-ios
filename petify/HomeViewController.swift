@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var search: UISearchBar!
     @IBOutlet weak var addDeleteSegment: UISegmentedControl!
+    @IBOutlet weak var test: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,19 +50,29 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    @IBAction func testAction(_ sender: UIButton) {
+    @IBAction func deleteSelected(_ sender: Any) {
         
-        for pet in petArray {
-            if pet.isSelected {
-                print("pet name: \(pet.name) selected")
+        let alert = UIAlertController(title: "Confirmar eliminados", message: "¿Desea eliminar las mascotas seleccionadas?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            var i = 0
+            for pet in self.petArray {
+                if pet.isSelected {
+                    print("pet name: \(pet.name) selected")
+                    self.petArray.remove(at: i)
+                    
+                } else {
+                    i += 1
+                }
             }
-        }
-        
+            
+            self.tableView.reloadData()
+        }))
+            
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+            
+        self.present(alert, animated: true, completion: nil)
         
     }
-    
-    
 
 }
 
@@ -101,6 +113,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         cell.selectionStyle = .none
+        test.text = petArray[indexPath.row].name
         
         
     }
