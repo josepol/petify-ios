@@ -20,12 +20,16 @@ class HomeViewController: UIViewController {
     var petArray = [cellData]()
     var petArrayFiltered: [cellData] = []
     
+    var petImages: [String] = []
+    
     var searchIsActive: Bool = false
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var search: UISearchBar!
     @IBOutlet weak var addDeleteSegment: UISegmentedControl!
     @IBOutlet weak var test: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     
     override func viewDidLoad() {
@@ -34,6 +38,8 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         search.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         petArray = [
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Muchachino", age: 7, isSelected: false),
@@ -41,6 +47,10 @@ class HomeViewController: UIViewController {
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Carby", age: 6, isSelected: false),
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Musha", age: 6, isSelected: false),
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Bruno", age: 6, isSelected: false)
+        ]
+        
+        petImages = [
+            "android", "ios", "angular", "cat", "bootstrap", "shoes1 2"
         ]
         
         
@@ -162,6 +172,23 @@ extension HomeViewController: CustomTableViewCellDelegate {
         let indexPath = tableView.indexPath(for: cell)
         petArray[(indexPath?.row)!].isSelected = cell.petSelected.isOn
     }
+
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return petImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_custom_cell", for: indexPath) as! CustomCollectionViewCell
+        
+        
+        cell.imageView.image = UIImage(named: self.petImages[indexPath.row])
+        
+        
+        return cell
+    }
     
 }

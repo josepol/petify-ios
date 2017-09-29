@@ -60,6 +60,7 @@
                                     <constraint firstAttribute="height" constant="31" id="5l8-xH-JR0"/>
                                     <constraint firstAttribute="width" constant="49" id="SdB-Tv-sCk"/>
                                 </constraints>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="petSelectedAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="G4V-sC-vOA"/>
                                 </connections>

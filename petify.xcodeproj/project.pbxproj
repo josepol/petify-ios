@@ -10,9 +10,12 @@
 		2CC2179C832380F4E30F1261 /* Pods_petifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FEBE98571D0897B5AAA00C /* Pods_petifyUITests.framework */; };
 		39DFA3F62A07D2B01A9681D9 /* Pods_petifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF2B20EEEDF48CF1E09ACA0 /* Pods_petifyTests.framework */; };
 		67B8E96436C21DA3A4338A0A /* Pods_petify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3D5DEAC4EC7EB580FA858 /* Pods_petify.framework */; };
+		FAC1AD811F7A554300F478F8 /* PictureDisplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1AD801F7A554300F478F8 /* PictureDisplayerView.swift */; };
+		FAC1AD841F7A751800F478F8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1AD831F7A751800F478F8 /* CustomCollectionViewCell.swift */; };
+		FAC1AD881F7AA0D700F478F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC1AD871F7AA0D700F478F8 /* Assets.xcassets */; };
+		FAD760011F7E9C2B00130B22 /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD760001F7E9C2B00130B22 /* NewPetViewController.swift */; };
 		FAFC4C3E1F750BC00041C575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */; };
 		FAFC4C431F750BC00041C575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C411F750BC00041C575 /* Main.storyboard */; };
-		FAFC4C451F750BC00041C575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C441F750BC00041C575 /* Assets.xcassets */; };
 		FAFC4C481F750BC00041C575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC4C461F750BC00041C575 /* LaunchScreen.storyboard */; };
 		FAFC4C531F750BC00041C575 /* petifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C521F750BC00041C575 /* petifyTests.swift */; };
 		FAFC4C5E1F750BC00041C575 /* petifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC4C5D1F750BC00041C575 /* petifyUITests.swift */; };
@@ -51,10 +54,13 @@
 		C7FDCE4F549D119CEF521B7B /* Pods-petify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petify/Pods-petify.debug.xcconfig"; sourceTree = "<group>"; };
 		CE49D0FE1A035F827CEDDDD1 /* Pods-petifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petifyUITests/Pods-petifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFF2B20EEEDF48CF1E09ACA0 /* Pods_petifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC1AD801F7A554300F478F8 /* PictureDisplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDisplayerView.swift; sourceTree = "<group>"; };
+		FAC1AD831F7A751800F478F8 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAC1AD871F7AA0D700F478F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAD760001F7E9C2B00130B22 /* NewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
 		FAFC4C3A1F750BC00041C575 /* petify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFC4C421F750BC00041C575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FAFC4C441F750BC00041C575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAFC4C471F750BC00041C575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAFC4C491F750BC00041C575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAFC4C4E1F750BC00041C575 /* petifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,9 +128,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FAD75FFF1F7E9C0800130B22 /* new */ = {
+			isa = PBXGroup;
+			children = (
+				FAD760001F7E9C2B00130B22 /* NewPetViewController.swift */,
+			);
+			name = new;
+			sourceTree = "<group>";
+		};
 		FAFC4C311F750BC00041C575 = {
 			isa = PBXGroup;
 			children = (
+				FAC1AD871F7AA0D700F478F8 /* Assets.xcassets */,
 				FAFC4C3C1F750BC00041C575 /* petify */,
 				FAFC4C511F750BC00041C575 /* petifyTests */,
 				FAFC4C5C1F750BC00041C575 /* petifyUITests */,
@@ -153,7 +168,6 @@
 				FAFC4C6B1F750C740041C575 /* controllers */,
 				FAFC4C3D1F750BC00041C575 /* AppDelegate.swift */,
 				FAFC4C411F750BC00041C575 /* Main.storyboard */,
-				FAFC4C441F750BC00041C575 /* Assets.xcassets */,
 				FAFC4C461F750BC00041C575 /* LaunchScreen.storyboard */,
 				FAFC4C491F750BC00041C575 /* Info.plist */,
 				FAFC4C711F750D630041C575 /* GoogleService-Info.plist */,
@@ -182,6 +196,7 @@
 		FAFC4C6B1F750C740041C575 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAD75FFF1F7E9C0800130B22 /* new */,
 				FAFC4C731F7512CC0041C575 /* home */,
 				FAFC4C6E1F750C9C0041C575 /* auth */,
 			);
@@ -217,6 +232,7 @@
 				FAFC4C6F1F750CBC0041C575 /* HomeViewController.swift */,
 				FAFC4C7E1F75415C0041C575 /* TableViewCell.swift */,
 				FAFC4C7F1F75415C0041C575 /* TableViewCell.xib */,
+				FAC1AD831F7A751800F478F8 /* CustomCollectionViewCell.swift */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -240,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFC4C831F75702C0041C575 /* CellView.swift */,
+				FAC1AD801F7A554300F478F8 /* PictureDisplayerView.swift */,
 			);
 			name = designers;
 			sourceTree = "<group>";
@@ -363,8 +380,8 @@
 				FAFC4C481F750BC00041C575 /* LaunchScreen.storyboard in Resources */,
 				FAFC4C811F75415C0041C575 /* TableViewCell.xib in Resources */,
 				FAFC4C721F750D630041C575 /* GoogleService-Info.plist in Resources */,
-				FAFC4C451F750BC00041C575 /* Assets.xcassets in Resources */,
 				FAFC4C431F750BC00041C575 /* Main.storyboard in Resources */,
+				FAC1AD881F7AA0D700F478F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,8 +569,11 @@
 				FAFC4C3E1F750BC00041C575 /* AppDelegate.swift in Sources */,
 				FAFC4C841F75702D0041C575 /* CellView.swift in Sources */,
 				FAFC4C801F75415C0041C575 /* TableViewCell.swift in Sources */,
+				FAC1AD841F7A751800F478F8 /* CustomCollectionViewCell.swift in Sources */,
 				FAFC4C791F751E9A0041C575 /* Pet.swift in Sources */,
 				FAFC4C701F750CBC0041C575 /* HomeViewController.swift in Sources */,
+				FAC1AD811F7A554300F478F8 /* PictureDisplayerView.swift in Sources */,
+				FAD760011F7E9C2B00130B22 /* NewPetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
