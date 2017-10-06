@@ -48,10 +48,8 @@ class HomeViewController: UIViewController {
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Musha", age: 6, isSelected: false),
             cellData(image: #imageLiteral(resourceName: "shoes1 2"), name: "Bruno", age: 6, isSelected: false)
         ]
-        
-        petImages = [
-            "android", "ios", "angular", "cat", "bootstrap", "shoes1 2"
-        ]
+
+        petImages = []
         
         
     }
@@ -62,6 +60,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func deleteSelected(_ sender: Any) {
         
+        var selectedAtLeastOne = false
+        
         let alert = UIAlertController(title: "Confirmar eliminados", message: "¿Desea eliminar las mascotas seleccionadas?", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
             var i = 0
@@ -69,6 +69,7 @@ class HomeViewController: UIViewController {
                 if pet.isSelected {
                     print("pet name: \(pet.name) selected")
                     self.petArray.remove(at: i)
+                    selectedAtLeastOne = true
                     
                 } else {
                     i += 1
@@ -76,6 +77,13 @@ class HomeViewController: UIViewController {
             }
             
             self.tableView.reloadData()
+            
+            if !selectedAtLeastOne {
+                let alertNoSelected = UIAlertController(title: "Ninguno seleccionado", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                alertNoSelected.addAction(UIKit.UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertNoSelected, animated: true, completion: nil)
+            }
+            
         }))
             
         alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
@@ -125,6 +133,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         test.text = petArray[indexPath.row].name
         
+        self.petImages = [
+            "android", "ios", "angular", "cat", "bootstrap", "shoes1 2"
+        ]
+        
+        self.collectionView.reloadData()
         
     }
     
@@ -186,7 +199,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         
         cell.imageView.image = UIImage(named: self.petImages[indexPath.row])
-        
         
         return cell
     }

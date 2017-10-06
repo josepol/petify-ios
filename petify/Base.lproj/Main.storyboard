@@ -108,7 +108,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="dpl-Fs-hfQ"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wuq-ma-ari">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wuq-ma-ari">
                                                             <size key="itemSize" width="200" height="200"/>
                                                             <size key="headerReferenceSize" width="20" height="20"/>
                                                             <size key="footerReferenceSize" width="20" height="20"/>
@@ -116,7 +116,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="collection_custom_cell" id="VdD-82-bBu" customClass="CustomCollectionViewCell" customModule="petify" customModuleProvider="target">
-                                                                <rect key="frame" x="60" y="30" width="200" height="200"/>
+                                                                <rect key="frame" x="30" y="-40" width="200" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -135,12 +135,12 @@
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
-                                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1hB-BM-fdh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="1hB-BM-fdh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="120"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionReusableView>
-                                                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qV5-Jk-bru">
-                                                            <rect key="frame" x="0.0" y="240" width="320" height="20"/>
+                                                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="qV5-Jk-bru">
+                                                            <rect key="frame" x="240" y="0.0" width="20" height="120"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionReusableView>
                                                     </collectionView>
@@ -252,7 +252,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Petify" id="6Fn-ew-Vfm">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="BSQ-t7-gxe"/>
+                                        <barButtonItem key="leftBarButtonItem" title="go back" id="BSQ-t7-gxe">
+                                            <connections>
+                                                <action selector="goBack:" destination="caY-lV-vp7" id="gpc-ej-OTU"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
